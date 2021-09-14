@@ -1,15 +1,15 @@
+
 public class Main {
 
     public static void main(String[] args)
     {
-        double amt_to_withdraw=995 , account_balance=1000;
+        double gross , net , DA , HRA , CCA=240 , PF , PT = 100 , basic = 25000;
+        DA = (basic* .7);
+        PF = basic*(10/100);
+        HRA = basic*(30/100);
 
-        //check the input
-        if( amt_to_withdraw>0 && amt_to_withdraw <= 2000 && amt_to_withdraw%5 ==0)
-        {
-           account_balance = account_balance - amt_to_withdraw - .5;
-        }
-
-        System.out.println("Balance :  " +account_balance);
+        gross = DA+PF+CCA+basic;
+        net = gross - PF - PT;
+        System.out.println("Gross Salary and Net Salary ! "+gross+" "+net);
     }
 }
